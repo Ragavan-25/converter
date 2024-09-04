@@ -42,7 +42,7 @@ nav a:hover{
     background-color: darkslateblue;
     margin-bottom: 3px;
 }
- #logo{
+ .logo a{
     width:200px;
     text-align:left;
     margin:10px;
