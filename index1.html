@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech Converter</title>
+   <style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(/bg.jpg);
+}
+h1{
+    color: blue;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 5px 5px 12px rgb(183, 13, 13);
+}
+
+textarea{
+    min-width: 300px;
+    min-height: 200px;
+    margin: 20px;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px black;
+    border: none;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button{
+    background-color: crimson;
+    color: white;
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px 5px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgb(185, 178, 178);
+}
+   </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Text To Speech Conventer</h1>
+        <textarea name="text" id="textTospeech"></textarea>
+        <button onclick="speak()">Text To Speech</button>
+    </div>
+
+    <script>
+        var speech=new SpeechSynthesisUtterance();
+        function speak(){
+    
+          speech.text=textTospeech.value;
+          speech.rate=1;
+          speech.volume=1;
+          speech.pitch=1;
+          window.speechSynthesis.speak(speech);
+
+        }
+    </script>
+
+</body>
+</html>
