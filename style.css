@@ -42,6 +42,9 @@ nav a:hover{
     background-color: darkslateblue;
     margin-bottom: 3px;
 }
+. logo #logo{
+    min-width:200px;
+}
 
 .menu{
     cursor: pointer;
