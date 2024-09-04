@@ -43,7 +43,9 @@ nav a:hover{
     margin-bottom: 3px;
 }
 . logo #logo{
-    min-width:200px;
+    width:200px;
+    text-align:left;
+    margin:10px;
 }
 
 .menu{
